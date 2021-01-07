@@ -1,0 +1,37 @@
+nav{
+  height: 80px;
+  div{
+    .expand_icon{
+      height: 15px;
+      hr{
+        height: 2px;
+        background-color: #303233;
+      }
+      hr:nth-child(1){
+        width: 30px;
+      }
+      hr:nth-child(2){
+        width: 25px;
+      }
+      hr:nth-child(3){
+        width: 20px;
+      }
+    }
+    .expand_icon:hover{
+      cursor: pointer;
+    }
+  }
+}
+header{
+  @extend %bgImg;
+  padding: 125px 0;
+  h4{
+    font-size: 18px;
+    color: $secondary-dark;
+  }
+  h1{
+    font-size: 54px;
+    font-family: raleway;
+    font-weight: bold;
+  }
+}

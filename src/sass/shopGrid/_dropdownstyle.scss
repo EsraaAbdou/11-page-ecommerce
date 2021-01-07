@@ -1,0 +1,42 @@
+nav{
+  .dropdown{
+    width: 20px;
+    height: 20px;
+    .dropdown-menu{
+      width: 300px;
+      margin-top: 30px!important;
+      background-color: rgba(255,255,255,0.95);
+    }
+    .col-10{
+      font-family: raleway;
+      font-size: 14px;
+      color: $secondary-dark;
+      h5{
+        font-family: lato;
+      }
+    }
+    .col-2{
+      font-size: 14px;
+      color: $secondary-dark;
+    }
+    a, a:hover{
+      text-decoration: none;
+      color: $dark;
+    }
+    button{
+      height: 40px;
+      font-size: 12px!important;
+      padding-right: 30px!important;
+      padding-left: 30px!important;
+    }
+  }
+}
+@media all and (max-width: 360px){
+  nav{
+    .dropdown{
+      .dropdown-menu{
+        width: 300px;
+      }
+    }
+  }
+}

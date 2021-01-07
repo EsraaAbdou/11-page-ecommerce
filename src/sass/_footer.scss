@@ -1,0 +1,47 @@
+footer{
+  .container{
+    padding: 110px 0;
+    h2{
+      font-size: 20px;
+    }
+    h4{
+      font-size: 10px;
+    }
+    h5{
+      font-size: 14px;
+      color: $light!important;
+    }
+    span{
+      font-family: kaushan;
+      font-size: 10px;
+    }
+    p{
+      color: $light;
+    }
+  }
+  .copyright{
+    font-family: lato;
+    font-size: 12px;
+    background-color: #242424;
+    color: #646565;
+    font-weight: bold;
+  }
+}
+// mediaquery
+@media all and (max-width:992px){
+  .lastSec{
+    .paddingMob{
+      padding-left: 0!important;
+    }
+  }
+}
+@media all and (max-width:992px){
+  .lastSec{
+    h5{
+      font-size: 10px!important;
+    }
+    .paddingMob{
+      padding-left: 20px!important;
+    }
+  }
+}

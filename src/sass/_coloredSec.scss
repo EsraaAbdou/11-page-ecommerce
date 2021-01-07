@@ -1,0 +1,21 @@
+.coloredSec{
+  padding: 50px 0;
+  h5{
+    font-size: 12px!important;
+  }
+  .col-md-3{
+    @extend %bgIcon;
+  }
+  .col-md-3:nth-child(1){
+    background-image: url("../../imgs/7.png");
+  }
+  .col-md-3:nth-child(2){
+    background-image: url("../../imgs/8.png");
+  }
+  .col-md-3:nth-child(3){
+    background-image: url("../../imgs/9.png");
+  }
+  .col-md-3:nth-child(4){
+    background-image: url("../../imgs/10.png");
+  }
+}

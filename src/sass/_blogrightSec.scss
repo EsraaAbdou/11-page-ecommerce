@@ -1,0 +1,61 @@
+section{
+  .col-md-4{
+    form{
+      input{
+        font-family: lato;
+        font-size: 14px;
+      }
+      a:hover{
+        color: $dark;
+      }
+    }
+    article{
+      padding-bottom: 50px;
+    }
+    ul{
+      font-family: lato;
+      font-size: 14px;
+      color: $secondary-dark;
+      li:first-of-type{
+        border-top-color: transparent;
+      }
+      .float{
+        float:right;
+      }
+      .lighter{
+        font-size: 14px;
+        color: #b6b6b6;
+      }
+    }
+    h2{
+      font-size: 18px;
+    }
+    h5{
+      font-size: 14px;
+    }
+    span{
+      font-size: 10px;
+    }
+    button{
+      color: $secondary-dark;
+      border: 1px solid $secondary-dark;
+      font-family: lato;
+    }
+    .date{
+      font-family: lato;
+      font-size: 10px;
+      color: $secondary-dark;
+    }
+  }
+}
+
+@media all and (max-width:576px){
+  .responsive{
+    width: auto!important;
+  }
+}
+@media all and (max-width:992px) and (min-width:768px){
+  .responsive{
+    width: auto!important;
+  }
+}

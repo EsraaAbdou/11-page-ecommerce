@@ -1,0 +1,36 @@
+@media (max-width: 490px) {
+  .shippingData{
+    input, select{
+      width: 300px!important;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .actionButtons{
+    .text-right{
+      text-align: left!important;
+    }
+  }
+}
+@media (max-width: 786px) {
+  .mainSec{
+    .noneIt{
+      display: none;
+    }
+    .p-0Res{
+      padding-left: 0;
+     }
+    .inputDim{
+      height: 30px;
+      width: 30px;
+    }
+    div.col-3.latoFont{
+      font-size: 12px;
+    }
+    .actionButtons{
+      button, input{
+        width: 290px!important;
+      }
+    }
+  }
+}

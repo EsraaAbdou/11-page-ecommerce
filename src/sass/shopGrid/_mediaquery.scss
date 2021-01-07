@@ -1,0 +1,10 @@
+@media all and (max-width: 990px){
+  .mediaquery_center{
+    text-align: center!important;
+  }
+}
+@media all and (max-width: 400px){
+  .pagination a{
+    padding:10px!important;
+  }
+}

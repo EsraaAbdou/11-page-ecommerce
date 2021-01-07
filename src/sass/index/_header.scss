@@ -1,0 +1,19 @@
+@import '../headerNav';
+header{
+  h1{
+    font-family: raleway;
+    font-size: 100px;
+  }
+  h4{
+    font-size: 24px;
+  }
+  button{
+    font-size: 14px!important;
+  }
+  height: 100vh;
+  @extend %bgImg;
+  background-image: url('../../imgs/home-header.jpg');
+  .headContent{
+    height: calc(100vh - 80px);
+  }
+}

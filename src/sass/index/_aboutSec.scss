@@ -1,0 +1,8 @@
+.aboutUs{
+  padding-bottom: 0;
+  @extend %bgImg;
+  background-image: url('../../imgs/home-aboutus.jpg');
+  button{
+    margin-bottom: 20px;
+  }
+}

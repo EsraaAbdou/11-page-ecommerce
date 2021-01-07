@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>E-commerce shop</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name=viewport content="width=device-width, initial-scale=1">
+        <meta name="description" content="E-commerce shop page">
+        <link rel="stylesheet" href="./css/shopList/base.css">
+        <script src="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.js"></script>
+        <script src="https://unpkg.com/wnumb@1.1.0"></script>
+        <link rel="stylesheet" href="https://unpkg.com/nouislider@10.0.0/distribute/nouislider.min.css">
+    </head>
+    <body>
+      <nav class="d-flex justify-content-between p-4">
+        <a href="./index.html"><img src="imgs/logo-dark.png" alt="logo"></a>
+        <div class="d-flex align-items-center">
+          <ul>
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" role="button" id="portfolioMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  
+                Portfolio
+              </a>
+              <div id="portfolio" class="dropdown-menu" aria-labelledby="portfolioMenu">
+                  <a class="dropdown-item" href="./portfolio.html">Portfolio</a>
+                  <a class="dropdown-item" href="./portfolioSingle.html">Portfolio Single</a>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" role="button" id="blogMenu" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+                Blog
+              </a>
+              <div id="blog" class="dropdown-menu" aria-labelledby="blogMenu">
+                  <a class="dropdown-item" href="./blog.html">Blog</a>
+                  <a class="dropdown-item" href="./blogSingle.html">Blog Single</a>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="dropdown-toggle" role="button" id="shopMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
+              </a>
+              <div id="shop" class="dropdown-menu" aria-labelledby="shopMenu">
+                  <a class="dropdown-item" href="./shopGrid.html">Shop Grid</a>
+                  <a class="dropdown-item" href="./shopList.html">Shop List</a>
+                  <a class="dropdown-item" href="./shopItem.html">Shop Item</a>
+              </div>
+            </li>
+            <li>
+              <a href="./cart.html">Cart</a>
+            </li>
+            <li>
+              <a href="./aboutUs.html">About</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+          <i id="close-menu" class="fas fa-2x fa-times"></i>
+          <div class="expand_icon">
+            <hr class="mt-0 mb-1 mr-0"><hr class="mt-0 mb-1 mr-0"><hr class="mt-0 mb-0 mr-0">
+          </div>
+          <i class="far fa-user mr-4"></i><i class="far fa-heart mr-4"></i><i class="fas fa-shopping-cart mr-2"></i><span class="bg-secondary pr-2 pl-2">2</span>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+          <div class="row w-100 d-flex align-items-center headContent">
+            <div class="col-md-6">
+              <h4>Shop List</h4>
+              <h1 class="mb-0">Our Products</h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-3">
+              <form class="mb-5">
+                <div class="form-row align-items-center">
+                  <div class="col-auto w-100">
+                    <label class="sr-only" for="inlineFormInputGroup">search</label>
+                    <div class="input-group mb-2">
+                      <input type="text" class="form-control border-right-0 rounded-0" id="inlineFormInputGroup" placeholder="Type and Hit Enter">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-light border-left-0">
+                          <a href="#"><i class="fa fa-search"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <article>
+              <h2>Product Categories</h2><hr class="ml-0 bg-secondary">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item pl-0 pr-0">Furniture<span class="float">( 31 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Vases<span class="float">( 23 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Pictures<span class="float">( 21 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Lighting<span class="float">( 7 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Figurines<span class="float">( 49 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Plants<span class="float">( 30 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Decorative Elements<span class="float">( 26 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Mirror<span class="float">( 13 )</span></li>
+                  <li class="list-group-item pl-0 pr-0">Candles<span class="float">( 9 )</span></li>
+                </ul>
+              </article>
+              <article class="filter">
+                <h2>Filter By Price</h2><hr class="ml-0 bg-secondary mb-5">
+                <div id="slider" class="mb-5"></div>
+                <button type="button" class="btn btn-light rounded-0 text-dark border-0">FILTER</button>
+              </article>
+              <article>
+                <h2>Color Filter</h2><hr class="ml-0 bg-secondary">
+                <!-- <div class="row"> -->
+                  <ul class="row">
+                    <li class="col-4">White</li>
+                    <li class="col-4">Red</li>
+                    <li class="col-4">Green</li>
+                    <li class="col-4">Black</li>
+                    <li class="col-4">Yellow</li>
+                    <li class="col-4">Blue</li>
+                    <li class="col-4">Beige</li>
+                    <li class="col-4">Orange</li>
+                    <li class="col-4">Purple</li>
+                </ul>
+                <!-- </div> -->
+              </article>
+              <article>
+                <h2>Previously Viewed</h2><hr class="ml-0 bg-secondary">
+                <div class="row">
+                  <div class="col-4 mb-4">
+                    <img src="imgs/shop-widget-img-1.jpg" alt="pot" class="w-100">
+                  </div>
+                  <div class="col-8">
+                    <h5 class="mb-0">Ceramic Textured Vase</h5>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <p class="price">$ 18.00</p>
+                  </div>
+                  <div class="col-4 mb-4">
+                    <img src="imgs/shop-widget-img-2.jpg" alt="pot" class="w-100">
+                  </div>
+                  <div class="col-8">
+                    <h5 class="mb-0">Air Plant Terrarium</h5>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <p class="price">$ 23.00</p>
+                  </div>
+                  <div class="col-4 mb-4">
+                    <img src="imgs/shop-widget-img-3.jpg" alt="pot" class="w-100">
+                  </div>
+                  <div class="col-8">
+                    <h5 class="mb-0">Geometric Concrete Planters</h5>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <p class="price">$ 21.00</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-9">
+              <div class="row w-100">
+                <div class="col-12">
+                  <div class="alert alert-custom" role="alert">
+                      <div class="row align-items-center">
+                        <div class="col-lg-6 mediaquery_center">
+                          <p class="mb-0">Showing 1-12 of 230 items</p>
+                        </div>
+                        <div class="col-lg-6 text-right mediaquery_center">
+                          <button type="button" class="btn btn-outline-primary mr-4" id="posDropDown" >Sort by Position<i class="fas fa-angle-down ml-1"></i></button>
+                          <a href="#"><i class="fas fa-th-large mr-2"></i></a>
+                          <a href="#"><i class="fas fa-bars"></i></a>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="banner bg-secondary d-inline-block pt-1 pb-1 pr-4 pl-4">SALE!</div>
+                  <div class="itemImg">
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class=""></div>
+                  <div class="itemImg">
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class=""></div>
+                  <div class="itemImg">
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="itemImg">
+                    <div class=""></div>
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="itemImg">
+                    <div class=""></div>
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                  <div class="itemImg">
+                    <div class="overlay w-100 h-100">
+                      <div class="d-flex justify-content-center align-items-center text-center h-100">
+                        <button type="button" class="btn btn-light">ADD TO CART</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex align-items-center itemDesc mb-5">
+                  <div>
+                    <div class="rating">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                    <h5 class="text-dark mt-3 mb-3">Snug. Vase Low / Copper</h5>
+                    <span class="lastInItem text-secondary">$ 15.00</span>
+                    <p class="mt-3 mb-3">
+                      Fusce lacinia molestie diam, sit amet condimentum tortor sagittis quis. Quisque id mauris turpis. Curabitur ultrices orci non
+                      auctor interdum. Sed id lacus sagittis, fermentum lacus eleifend, posuere sem. Aenean dignissim rutrum neque rhoncus posuere.
+                      Aliquam imperdiet orci hendrerit tortor congue maximus. Ut consequat nunc vestibulum...
+                    </p>
+                    <button type="button" class="btn btn-secondary rounded-0 mb-2">ADD TO CART</button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="far fa-heart"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                    <button type="button" class="btn btn-light rounded-0">
+                      <i class="fas fa-link"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <nav class="d-flex justify-content-center">
+                    <ul class="pagination">
+                      <li class="page-item mr-3">
+                        <a class="page-link rounded-0 text-dark p-3" href="#" tabindex="-1">
+                          <i class="fas fa-arrow-left fa-1x"></i><span class="d-none pl-2">Previous</span>
+                        </a>
+                      </li>
+                      <li class="page-item"><a class="page-link text-dark p-3 border-right-0" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link text-dark p-3 border-right-0 border-left-0" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link text-dark p-3 border-right-0 border-left-0" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link text-dark p-3 border-right-0 border-left-0" href="#">4</a></li>
+                      <li class="page-item mr-3"><a class="page-link text-dark p-3 border-left-0" href="#">5</a></li>
+                      <li class="page-item">
+                        <a class="page-link rounded-0 text-dark p-3" href="#">
+                          <span class=" d-none pr-2">Next</span><i class="fas fa-arrow-right fa-1x"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="bg-dark text-light">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-4">
+              <h2>About Us</h2>
+              <hr class="bg-secondary ml-0 mb-4">
+              <p>
+                Morbi eu purus eget tellus fringilla malesuada eget nec nisi. Etiam nec dolor porttitor, cursus elit quis, tristique erat.   Sed rhoncus molestie elit sit amet viverra.
+              </p>
+              <div class="row">
+                <div class="col-1 pr-0">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="col-11 p-0 pl-3">
+                  <p>90-120 Swanston St,Melbourne VIC 3000, Australia</p>
+                </div>
+                <div class="col-1 pr-0">
+                  <i class="fas fa-phone pr-2"></i>
+                </div>
+                <div class="col-11 p-0 pl-3">
+                  <p>+61 3 9559 9559 or +61 3 9669 9669</p>
+                </div>
+                <div class="col-1 pr-0">
+                    <i class="far fa-envelope pr-2"></i>
+                </div>
+                <div class="col-11 p-0 pl-3">
+                  <p>support@gtcreators.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h2>Recent News</h2>
+              <hr class="bg-secondary ml-0 mb-4">
+              <div class="row pl-3">
+                <div class="col-1 col-sm-2 p-0 mb-3">
+                  <img src="imgs/footer-img-9.jpg" alt="newsPic" >
+                </div>
+                <div class="col-11 col-sm-10 mb-3 d-flex align-items-center">
+                  <div class="paddingMob">
+                    <span>14/07/2016</span>
+                    <h5 class="mb-0">Ut molestie quam erat, non finibus erat</h5>
+                  </div>
+                </div>
+                <div class="col-1 col-sm-2 p-0 mb-3">
+                  <img src="imgs/footer-img-10.jpg" alt="newsPic" >
+                </div>
+                <div class="col-11 col-sm-10 mb-3 d-flex align-items-center">
+                  <div class="paddingMob">
+                    <span>14/07/2016</span>
+                    <h5>Mauris vel est porta, viverra orci non</h5>
+                  </div>
+                </div>
+                <div class="col-1 col-sm-2 p-0 mb-3">
+                  <img src="imgs/footer-img-11.jpg" alt="newsPic" >
+                </div>
+                <div class="col-11 col-sm-10 mb-3 d-flex align-items-center">
+                  <div class="paddingMob">
+                    <span>14/07/2016</span>
+                    <h5>Duis nibh nisl, egestas non sapien volutpat</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 galleryFooter">
+              <h2>Our Gallery</h2>
+              <hr class="bg-secondary ml-0 mb-4">
+              <div class="row">
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-1.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-2.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-3.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-4.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-5.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-6.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-7.jpg" alt="galleryItem">
+                </div>
+                <div class="col-6 col-md-6 col-xl-3 mb-2">
+                  <img src="imgs/footer-img-8.jpg" alt="galleryItem">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center font-weight-bold copyright pt-2 pb-2">©2016 GTC. All rights reserved.</div>
+      </footer>
+      <script src="js/jquery.slim.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/menu.min.js"></script>
+      <script src="js/sliderScript.min.js"></script>
+    </body>
+</html>

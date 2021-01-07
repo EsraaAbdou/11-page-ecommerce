@@ -1,0 +1,45 @@
+.ourwork{
+  @extend %bgImg;
+  background-image: url('../../imgs/home-ourwork.jpg');
+  i{
+    border: 1px;
+  }
+  .item{
+    .icon{
+      color: $secondary-dark;
+      border:1px solid $secondary-dark;
+      height: 30px;
+      width: 30px;
+    }
+    p{
+      margin:0;
+      font-size: 12px;
+    }
+  }
+  .item:hover{
+    cursor: pointer;
+  }
+  .selectedItem{
+    p{
+      color: $dark;
+    }
+    .icon{
+      background-color: $secondary;
+      border-color: $secondary;
+      color: $light;
+    }
+  }
+  .description{
+    display: none!important;
+  }
+   .selected-description{
+     display: flex!important;
+   }
+  .empty{
+    height: 30px;
+    width: 73.5px;
+  }
+  p:nth-child(2){
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,111 @@
+button{
+box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+font-family: raleway;
+font-weight: bold;
+}
+#posDropDown{
+  padding: 0!important;
+  box-shadow: none;
+  border:none;
+  color: $secondary-dark;
+}
+#posDropDown:hover{
+  background-color: transparent;
+}
+.alert{
+  a:hover{
+    color: $secondary-dark;
+  }
+}
+.alert-custom{
+  background-color: $secondary-light;
+  color: $secondary-dark;
+}
+.itemImg{
+  @extend %bgImg;
+  height: 290px;
+}
+.itemImg:hover{
+  .overlay{
+    visibility: visible;
+    }
+}
+.itemDesc{
+  .rating{
+    color: $secondary-dark!important;
+    font-size: 12px!important;
+  }
+  h5{
+    font-size: 20px;
+  }
+  span{
+    font-family: lato;
+    font-size: 14px;
+  }
+  button{
+    box-shadow: none;
+    margin-right: 7px;
+  }
+  button.btn-light{
+    background-color: $secondary-light!important;
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+  }
+}
+
+
+.col-xl-4{
+  margin-bottom: 100px;
+  i{
+    color:$secondary-dark;
+  }
+}
+
+.col-md-4:nth-child(2) .itemImg{
+  background-image: url('../../imgs/shop-img-1.jpg');
+}
+.col-md-4:nth-child(4) .itemImg{
+  background-image: url('../../imgs/shop-img-2.jpg');
+}
+.col-md-4:nth-child(6) .itemImg{
+  background-image: url('../../imgs/shop-img-3.jpg');
+}
+.col-md-4:nth-child(8) .itemImg{
+  background-image: url('../../imgs/shop-img-4.jpg');
+}
+.col-md-4:nth-child(10) .itemImg{
+  background-image: url('../../imgs/shop-img-5.jpg');
+}
+.col-md-4:nth-child(12) .itemImg{
+  background-image: url('../../imgs/shop-img-6.jpg');
+}
+.banner{
+  font-family: raleway;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top:20px;
+}
+.overlay{
+  background-color: rgba(255,255,255,0.8);
+  visibility: hidden;
+}
+p.lastInItem{
+  color: $dark!important;
+  margin-bottom: 65px;
+}
+h5{
+  font-size: 16px;
+  color: $secondary-dark!important;
+}
+nav{
+  font-family:lato;
+  font-size: 14px;
+  .page-link:first-of-type:hover,.page-link:last-of-type:hover{
+    color: $light!important;
+    background-color: $secondary;
+    span{
+      display: inline!important;
+    }
+  }
+}

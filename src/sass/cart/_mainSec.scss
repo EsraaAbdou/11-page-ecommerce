@@ -1,0 +1,85 @@
+.mainSec{
+  .greyBg{
+    background-color: $secondary-light;
+  }
+  .inputDim{
+    height: 45px;
+    width: 45px;
+  }
+  i{
+    font-size: 14px;
+    color: $secondary-dark!important;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h5{
+    font-size: 16px;
+  }
+  input{
+    font-family: lato;
+    font-size: 14px;
+  }
+  .m-100{
+    margin-bottom: 100px;
+  }
+  .m-65{
+    margin-bottom: 65px;
+  }
+  .tabsFont{
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .latoFont{
+    font-family: lato;
+  }
+  .actionButtons{
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: bold;
+    .btn:last-of-type{
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+    }
+    input{
+      height: 50px;
+      width: 315px;
+    }
+  }
+  .shippingData{
+    input, select{
+      height: 40px;
+      width: 470px;
+      margin-bottom: 35px;
+      font-size: 14px;
+      font-family:lato;
+      color: $secondary-dark;
+      font-style: italic;
+    }
+    label{
+      font-family: raleway;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .cartDetails{
+    h5{
+      font-size: 16px;
+    }
+    button{
+      font-family: raleway;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    h4{
+      font-family: lato;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    span{
+      font-family: lato;
+      font-size: 16px;
+      color: $secondary-dark;
+    }
+  }
+}

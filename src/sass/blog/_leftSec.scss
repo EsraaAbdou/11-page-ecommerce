@@ -1,0 +1,112 @@
+section{
+  .col-md-8{
+    .blogDesc{
+      font-size: 12px;
+    }
+    .blogItem{
+      height: 300px;
+    }
+    .col-md-6 .blogItem:hover{
+       .overlay{
+        visibility: visible;
+      }
+    }
+    .col-md-6:nth-child(1) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-1.jpg');
+    }
+    .col-md-6:nth-child(2) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-2.jpg');
+    }
+    .col-md-6:nth-child(3) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-3.jpg');
+    }
+    .col-md-6:nth-child(4) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-4.jpg');
+    }
+    .col-md-6:nth-child(5) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-5.jpg');
+    }
+    .col-md-6:nth-child(6) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-6.jpg');
+    }
+    .col-md-6:nth-child(7) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-7.jpg');
+    }
+    .col-md-6:nth-child(8) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-8.jpg');
+    }
+    .col-md-6:nth-child(9) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-9.jpg');
+    }
+    .col-md-6:nth-child(10) .blogItem{
+      @extend %bgImg;
+      background-image: url('../../imgs/blog-mid-img-10.jpg');
+    }
+    .overlay{
+      background-color: rgba(255,255,255,0.8);
+      visibility: hidden;
+      p:nth-child(1){
+        font-family: lato;
+        font-size: 14px;
+      }
+      p:nth-child(2){
+        font-family: raleway;
+        font-size: 20px;
+      }
+    }
+    a{
+      text-decoration: none;
+      font-family: raleway;
+      font-size: 10px;
+      font-weight: bold;
+    }
+    a:hover{
+      color:inherit;
+      hr{
+        animation: hrWidth 500ms 1;
+        width: 18%;
+      }
+    }
+    .content{
+      p{
+        font-family: lato;
+      }
+      p.date{
+        font-size: 10px;
+      }
+      h3{
+        font-family: raleway;
+        font-size: 18px;
+      }
+    }
+  }
+  nav{
+    font-family:lato;
+    font-size: 14px;
+    .page-link:first-of-type:hover,.page-link:last-of-type:hover{
+      color: $light!important;
+      background-color: $secondary;
+      span{
+        display: inline!important;
+      }
+    }
+  }
+}
+@keyframes hrWidth {
+    from {width: 10%;}
+    to {width: 18%;}
+}
+@media all and (max-width: 400px){
+  .pagination a{
+    padding:10px!important;
+  }
+}

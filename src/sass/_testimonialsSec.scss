@@ -1,0 +1,20 @@
+.Testimonials{
+  @extend %bgImg;
+  background-image: url('../../imgs/home-section-bg-5.jpg');
+  background-attachment: fixed;
+  p:first-of-type{
+    font-size: 16px;
+  }
+  p:last-of-type{
+    margin-bottom: 0;
+  }
+  h3{
+    font-family: raleway;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .testimonials-icon{
+    @extend %bgIcon;
+    background-image: url("../../imgs/11.png");
+  }
+}

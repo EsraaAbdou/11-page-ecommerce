@@ -1,0 +1,50 @@
+.team{
+  .col-md-4:hover{
+    .overlay{
+      visibility: visible;
+    }
+  }
+  .col-md-4{
+    .teamImg{
+      height: 400px;
+      @extend %bgImg;
+      background-position: top;
+    }
+  }
+  .col-md-4:nth-child(1){
+    .teamImg{
+      background-image: url('../../imgs/about-team-1.jpg');
+    }
+  }
+  .col-md-4:nth-child(2){
+    .teamImg{
+      background-image: url('../../imgs/about-team-2.jpg');
+    }
+  }
+  .col-md-4:nth-child(3){
+    .teamImg{
+      background-image: url('../../imgs/about-team-3.jpg');
+    }
+  }
+  .overlay{
+    background-color: rgba(255,255,255,0.8);
+    visibility: hidden;
+    p:nth-child(1){
+      font-family: lato;
+      font-size: 14px;
+    }
+    p:nth-child(2){
+      font-family: raleway;
+      font-size: 20px;
+    }
+  }
+  h5{
+    font-size: 18px;
+  }
+  .container-fluid{
+    width: 95%;
+  }
+  a{
+    padding: 5px 10px;
+  }
+}

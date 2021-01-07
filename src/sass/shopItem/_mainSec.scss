@@ -1,0 +1,51 @@
+.mainSec{
+    padding-bottom: 60px!important;
+  i{
+    font-size: 16px;
+    color: $secondary-dark!important;
+  }
+  span{
+    font-family: lato;
+    font-size: 14px;
+    color: $secondary-dark;
+  }
+  h5{
+    font-size: 16px;
+  }
+  .price{
+    font-size: 34px;
+  }
+  .old-price{
+    font-family: lato;
+    color: $secondary-dark;
+    text-decoration: line-through;
+  }
+  button{
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.15);
+  font-family: raleway;
+  font-weight: bold;
+  box-shadow: none;
+  margin-right: 7px;
+  }
+  button.btn-light{
+    background-color: $secondary-light!important;
+    padding-right: 20px!important;
+    padding-left: 20px!important;
+    i{
+      color: $dark!important;
+    }
+  }
+  button.btn-outline-secondary{
+    width: 30px;
+    height: 30px;
+    padding: 0!important;
+    border-color: $secondary-light;
+    i{
+      font-size: 12px;
+      color: $dark!important;
+    }
+  }
+  em{
+    font-size: 12px!important;
+  }
+}

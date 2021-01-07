@@ -1,0 +1,64 @@
+.tabs{
+  padding-top: 0!important;
+  h5, ul{
+    font-family: lato;
+    font-size: 14px;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: $secondary-dark;
+    li {
+    padding-left: 1em;
+    text-indent: -1em;
+    }
+    li::before {
+      content: "• ";
+      color: $secondary-dark;
+    }
+  }
+  .btn-outline-secondary{
+    color: $dark;
+    border-color: $secondary-dark;
+    font-family: lato;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .btn-outline-secondary.active{
+    background-color: $secondary;
+    border-color: transparent;
+  }
+  .light-bg{
+    background-color: $secondary-light;
+    padding: 40px;
+  }
+  .col-xl-3{
+    .item{
+      @extend %bgImg;
+      height: 290px;
+    }
+  }
+  .col-xl-3:nth-child(1) .item{
+    background-image: url('../../imgs/shop-img-1.jpg');
+  }
+  .col-xl-3:nth-child(2) .item{
+    background-image: url('../../imgs/shop-img-2.jpg');
+  }
+  .col-xl-3:nth-child(3) .item{
+    background-image: url('../../imgs/shop-img-3.jpg');
+  }
+  .col-xl-3:nth-child(4) .item{
+    background-image: url('../../imgs/shop-img-4.jpg');
+  }
+  .overlay{
+    background-color: rgba(255,255,255,0.8);
+    visibility: hidden;
+
+  }
+  .item:hover{
+    .overlay{
+      visibility: visible;
+      }
+  }
+}

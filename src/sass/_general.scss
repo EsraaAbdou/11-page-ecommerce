@@ -1,0 +1,59 @@
+@import 'variables';
+@import 'fonts';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import 'footer';
+body{
+  margin: 0;
+  color: $dark;
+}
+%bgImg{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+%bgIcon{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+section{
+  padding: 130px 0;
+}
+hr{
+  width: 10%;
+}
+h2, h5{
+  font-family: raleway;
+  font-weight: bold;
+}
+h4{
+  font-family: Kaushan;
+  font-size: 14px;
+}
+h2{
+  font-size: 30px;
+}
+p{
+  font-family: lato;
+  font-size: 14px;
+  color: $secondary-dark;
+  font-weight: 500;
+}
+button{
+ font-size: 14px!important;
+ height: 50px;
+ padding: 0 50px!important;
+}
+button.btn.btn-light:hover{
+  background-color: $secondary;
+}
+a{
+  color:inherit;
+}
+a:hover{
+  color:$secondary;
+}
